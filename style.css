@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing:content-box;
   font-family: Arial, sans-serif;
+  color: #ffffff;
   
   
 }
@@ -22,7 +23,7 @@
 
 body {
   background: var(--bg);
-  color: var(--text);
+  color: #ffffff;
   scroll-behavior: smooth;
   transition: background 0.4s, color 0.4s;
   line-height: 1.8;
@@ -35,7 +36,10 @@ p {
 
 h1, h2, h3 {
   line-height: 1;
-  margin-bottom: 8px;
+  text-align: center;
+  font-size: 29px;
+  margin-bottom: 20px;
+  font-weight: 600;
 }
 
 .section h2 {
@@ -65,7 +69,7 @@ h1, h2, h3 {
 
 
 .highlight {
-  color: white;
+  color: #ffffff;
 }
 
 /*-------------------------------------------------------------------------------------- */
@@ -73,9 +77,76 @@ h1, h2, h3 {
 /* Sections */
 .section {
   padding: 50px 20px;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: auto;
   scroll-margin-top: 100px;
+}
+
+/*-------------------------------------------------------------------------------------- */
+
+
+/*-------------------------------------------------------------------------------------- */
+/* Testing Expertise */
+
+body {
+  background: #050b1d;
+    font-family: Arial, sans-serif;
+  color: #ffffff;
+}
+
+.testing-expertise {
+  padding: 25px 5%;
+  background: radial-gradient(
+    circle at top,
+    #0b1437 0%,
+    #050b1d 60%
+  );
+}
+
+.testing-expertise h2 {
+  text-align: center;
+  font-size: 29px;
+  margin-bottom: 50px;
+  font-weight: 600;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.expertise-card {
+  position: relative;
+  padding: 22px 26px;
+  border-radius: 14px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.02)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02),
+              0 20px 40px rgba(0, 0, 0, 0.4);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: all 0.3s ease;
+}
+
+.expertise-card span {
+  width: 10px;
+  height: 10px;
+  background: #2dd4ff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(45, 212, 255, 0.8);
+}
+
+.expertise-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(45, 212, 255, 0.5);
+  box-shadow: 0 25px 60px rgba(45, 212, 255, 0.15);
 }
 
 /*-------------------------------------------------------------------------------------- */
@@ -146,9 +217,16 @@ h1, h2, h3 {
 
 /*-------------------------------------------------------------------------------------- */
 /* Certificates grid */
+
+body {
+  background: #050b1d;
+    font-family: Arial, sans-serif;
+  color: #ffffff;
+}
+
 .certificates-grid {
   display:grid;
-  background-color:var(--bg);
+  background-color:#050b1d;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 10px;
   margin-top: 20px;
@@ -156,20 +234,29 @@ h1, h2, h3 {
 
 /* Certificates card */
 .certificates-card {
+   position: relative;
   background:#0f172a;
-  border-radius: 10px;
-  padding:5px; margin:0.5px;
+    background: radial-gradient(
+    circle at top,
+    #0b1437 0%,
+    #050b1d 60%);
+
+  border-radius: 14px;
+  padding: 22px 26px;
   text-align: center;
   text-decoration: none;
-  color: var(--text);
+  color: #ffffff;
   display: flex;
   flex-direction:column;
   align-items:center;
   gap: 0.5px;
-  border: 5px;
-   
+  border: 0.1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02),
+              0 20px 40px rgba(0, 0, 0, 0.4);
 
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 16px;   
+
+    transition: all 0.3s ease;
 }
 
 /* Image */
@@ -189,8 +276,10 @@ h1, h2, h3 {
 /* Hover & focus */
 .certificates-card:hover,
 .certificates-card:focus-visible {
-  transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 12px 30px rgba(56, 189, 248, 0.25);
+  transform: translateY(-4px);
+  border-color: rgba(45, 212, 255, 0.5);
+  box-shadow: 0 25px 60px rgba(45, 212, 255, 0.15);
+
 }
 
 /*-------------------------------------------------------------------------------------- */
@@ -211,7 +300,12 @@ h1, h2, h3 {
 .modal {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.6);
+  background: radial-gradient(
+    circle at top,
+    #0b1437 0%,
+    #050b1d 60%
+  );
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -239,6 +333,12 @@ h1, h2, h3 {
   align-items: center;
   gap: 10px;
   text-align: justify;
+  background: radial-gradient(
+    circle at top,
+    #0b1437 0%,
+    #050b1d 60%
+  );
+
 }
 
 .about-img {
@@ -265,7 +365,13 @@ h1, h2, h3 {
   align-items: center;
 
   padding: 1 24px;
-  background:0x0f172a;
+  background: radial-gradient(
+    circle at top,
+    #0b1437 0%,
+    #050b1d 60%
+
+    );
+
   z-index: 9999;
 }
 
@@ -273,7 +379,7 @@ h1, h2, h3 {
 .debug-logo {
   font-size: 21px;
   font-weight: bold;
-  color: white;
+  color: #ffffff;
   display: flex;
   
 }
@@ -289,7 +395,7 @@ h1, h2, h3 {
 
 /* Links */
 .debug-right a {
-  color:white;
+  color:#ffffff;
   font-weight: bold;
   text-decoration: none;
   
@@ -323,29 +429,47 @@ body {
 /* Projects grid */
 .projects-grid {
   display:grid;
-  background-color:var(--bg);
+  background-color:#050b1d;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 10px;
   margin-top: 20px;
 }
 
 /* Project card */
+
+body {
+  background: #050b1d;
+    font-family: Arial, sans-serif;
+  color: #ffffff;
+}
+
 .project-card {
+  position: relative;
   background:#0f172a;
-  border-radius: 10px;
-  padding:5px; margin:0.5px;
+    background: radial-gradient(
+    circle at top,
+    #0b1437 0%,
+    #050b1d 60%);
+
+  border-radius: 14px;
+  padding: 22px 26px;
   text-align: center;
   text-decoration: none;
-  color: var(--text);
+  color: #ffffff;
   display: flex;
   flex-direction:column;
   align-items:center;
   gap: 0.5px;
-  border: 5px;
-   
+  border: 0.1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02),
+              0 20px 40px rgba(0, 0, 0, 0.4);
 
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 16px;   
+
+    transition: all 0.3s ease;
 }
+
+
 
 /* Image */
 .project-card img {
@@ -358,15 +482,19 @@ body {
 
 /* Label text */
 .project-card span {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 100;
+   
+
   }
 
 /* Hover & focus */
 .project-card:hover,
 .project-card:focus-visible {
-  transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 12px 30px rgba(56, 189, 248, 0.25);
+  transform: translateY(-4px);
+  border-color: rgba(45, 212, 255, 0.5);
+  box-shadow: 0 25px 60px rgba(45, 212, 255, 0.15);
+
 }
 
 /*------------------------------------------------------------------------------------------------- */
